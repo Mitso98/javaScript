@@ -69,8 +69,8 @@ function countOcurance(input) {
   var obj = {};
 
   for (let iterator of input) {
-    iterator = iterator === " " ? "White space" : iterator;
-
+    iterator = iterator === " " ? "White space" : iterator.toLowerCase();
+    
     if (obj[iterator]) {
       obj[iterator] += 1;
     } else {
