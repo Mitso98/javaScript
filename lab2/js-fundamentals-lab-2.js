@@ -47,11 +47,10 @@ var formattedUsers = [
 function reducerFunc() {
   return formattedUsers.map((obj) => (obj.age < 40 ? obj.age : 0));
 }
-
+var ages = reducerFunc();
 var average =
-  reducerFunc().reduce(
-    (accumulator, currentValue) => accumulator + currentValue
-  ) / reducerFunc().length;
+  ages.reduce((accumulator, currentValue) => accumulator + currentValue) /
+  ages.length;
 
 console.log(average);
 /*
