@@ -109,7 +109,7 @@ function formattedObj(obj) {
     for (var j = address_length; j >= 0; j--) {
       if (address_keys[address_index] !== "buildingNumber") {
         result[i][address_keys[address_index++]] = address_details[j];
-      } else if (! isNaN(Number(address_details[j])) ) {
+      } else if (!isNaN(Number(address_details[j]))) {
         result[i][address_keys[address_index++]] = Number(address_details[j]);
       }
     }
@@ -121,6 +121,7 @@ function formattedObj(obj) {
 
 var result = formattedObj(detailedUsers);
 console.log(result);
+
 /**
  * Notes:
  * - Address is always in the following format: 'building number, street name, district, city, country'
