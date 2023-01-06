@@ -70,12 +70,9 @@ function countOcurance(input) {
 
   for (let iterator of input) {
     iterator = iterator === " " ? "White space" : iterator.toLowerCase();
-    
-    if (obj[iterator]) {
-      obj[iterator] += 1;
-    } else {
-      obj[iterator] = 1;
-    }
+
+    if (obj[iterator]) obj[iterator] += 1;
+    else obj[iterator] = 1;
   }
   return obj;
 }
@@ -103,9 +100,9 @@ var obj = countOcurance(input);
 
 formatOcurrance(obj);
 /* Output should be exactly like this in the console.
-1 ocurred once
-9 ocurred once
-a ocurred once
+    1 ocurred once
+    9 ocurred once
+    a ocurred once
     b ocurred twice
     f ocurred 3 times
     l ocurred once
