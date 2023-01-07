@@ -45,7 +45,7 @@ var formattedUsers = [
 ];
 // Write the implementation of reducerFunc.
 function reducerFunc() {
-  return formattedUsers.map((obj) => (obj.age < 40 ? obj.age : 0));
+  return formattedUsers.filter((obj) => obj.age < 40).map((obj) => obj.age);
 }
 var ages = reducerFunc();
 var average =
